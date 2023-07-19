@@ -12,7 +12,7 @@ export default async function handler(req, res) {
   const response = await openai.createChatCompletion({
     model: 'gpt-3.5-turbo',
     stream: true,
-    messages: [{ role: 'user', content: 'What is love?' }]
+    messages: [{ role: 'user', content: 'What is a pet store?' }]
   })
   const stream = OpenAIStream(response)
   return new StreamingTextResponse(stream)
